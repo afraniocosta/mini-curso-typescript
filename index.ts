@@ -10,7 +10,7 @@ button.addEventListener("click", function(){
     console.log(sum(Number(input1.value), Number(input2.value)));
 })
 
-// Ao inputar valores, ao invés de somar os valores, houve uma concatenação, pois foi entendido que era string
+// Primeiro problema: Quando foram inputados os valores, ao invés de somá-los, houve uma concatenação, pois foi entendido que era string
 
 // MSGs:
 // 1)
