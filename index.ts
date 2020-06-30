@@ -1,6 +1,9 @@
 const input1 = document.getElementById("num1") as HTMLInputElement;
 const input2 = document.getElementById("num2") as HTMLInputElement;
-const button = document.getElementById("button");
+const button = document.getElementById("button")!;
+
+// Esta exclamação é pq após criar o arquivo tsconfig e definir a pasta dist como destino do arquivo 
+// compilado deu a msg que este button poderia ser null, ou seja existir ou não.
 
 function sum (a: number, b: number) {
     return a + b;
@@ -27,7 +30,9 @@ button.addEventListener("click", function(){
 // Agora ele está percebendo que é uma string e nos avisou, e tmb me diz que não posso usar string pq o parâmetro é do tipo number
 // Sendo assim foi parsear essa string para number
 
-// Comando para compilar: tsc index.ts --watch
+// Comando para compilar: tsc index tsc ou index.ts --watch
 
 // OBS: Não preciso tipar a função pois o ts saber que number é número.
 // Dica: Se o ts e o eslint não estão reclamando não preciso mudar nada
+
+// Para definir as regras e para onde vai o arquivo compilado crio o arquivo tsconfig.json. Para criar esse arquivo dou tsc --init

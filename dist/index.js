@@ -1,3 +1,4 @@
+"use strict";
 var input1 = document.getElementById("num1");
 var input2 = document.getElementById("num2");
 var button = document.getElementById("button");
@@ -7,7 +8,7 @@ function sum(a, b) {
 button.addEventListener("click", function () {
     console.log(sum(Number(input1.value), Number(input2.value)));
 });
-// Ao inputar valores, ao invés de somar os valores, houve uma concatenação, pois foi entendido que era string
+// Primeiro problema: Quando foram inputados os valores, ao invés de somá-los, houve uma concatenação, pois foi entendido que era string
 // MSGs:
 // 1)
 // Msg exibida nos values da linha 10: Property 'value' does not exist on type 'HTMLElement'.
@@ -20,10 +21,6 @@ button.addEventListener("click", function () {
 // Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)
 // Agora ele está percebendo que é uma string e nos avisou, e tmb me diz que não posso usar string pq o parâmetro é do tipo number
 // Sendo assim foi parsear essa string para number
-
-// Comando para compilar: tsc index tsc ou index.ts --watch
-
+// Comando para compilar: tsc index.ts --watch
 // OBS: Não preciso tipar a função pois o ts saber que number é número.
 // Dica: Se o ts e o eslint não estão reclamando não preciso mudar nada
-
-// Para definir as regras e para onde vai o arquivo compilado crio o arquivo tsconfig.json. Para criar esse arquivo dou tsc --init
