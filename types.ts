@@ -52,3 +52,21 @@ let cart: object;
 cart = {
     key: 'fi'
 }
+
+// Type Inference, ou inferência de tipo. Mesmo sem eu declafrar o tipo aqui ele já entende que uma string por eu ter passado uma string. 
+//  Então se eu quiser reatribuir o valor de message2 para um número vai avisar que não pode pq eu já assinalei comp string 
+let message2 = 'mensagem definida'
+message2 = 1
+
+// eu não preciso fazer isso abaixo, pois ele infere, ou seja percebe que é uma string
+let message2: string = 'mensagem definida'
+
+window.addEventListener('click', (e) => {
+    console.log(e.target);
+})
+
+// eu não preciso fazer como abaixo pq o TS já infere isso
+window.addEventListener('click', (e: MouseEvent) => {
+    console.log(e.target);
+})
+
