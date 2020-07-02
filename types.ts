@@ -70,3 +70,4 @@ window.addEventListener('click', (e: MouseEvent) => {
     console.log(e.target);
 })
 
+// Em TS vc não precisa tipar tudo, apenas as informações que ele ou o desenvolvedor não conhece
