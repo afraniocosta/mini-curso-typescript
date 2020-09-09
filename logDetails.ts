@@ -1,7 +1,6 @@
-// type alias, que em inglês é atalho
+// type alias
 type Uid = string | number | undefined
-
-// Para evitar ficar repetindo o string | number | undefined, eu posso criar um type como acima e o uid abaixo recebe ele.
+// Para evitar repetição dos tipos 'string | number | undefined', eu posso criar um type Uid e usá-lo.
 
 function logDetails (uid: Uid | number, item: string) {
     console.log(`A prduct with ${uid} has a title as ${item}.`);
