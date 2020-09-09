@@ -26,7 +26,7 @@ const char: CharInfo = {
 
 // intersection
 type PlayerInfo = AccountInfo & CharInfo
-// Aqui estou dizendo que o PlayerInfo é a intersecção entre esses 2. Ele junta os 2 tipos.
+// Aqui estou criando um type PlayerInfo, que é formado pela intersecção entre AccountInfo e CharInfo.
 
 const player: PlayerInfo = {
   id: 123,
